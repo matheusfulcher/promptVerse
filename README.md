@@ -18,7 +18,7 @@ It features a clean layout and smooth animations.
 
 
 
-The design is based on a [Figma community template] (https://www.figma.com/community/file/1385497115608726899/prompverse-ai-ai-landing-page-modern-landing-page-minimal-landing-page)
+The design is based on a [Figma community template](https://www.figma.com/community/file/1385497115608726899/prompverse-ai-ai-landing-page-modern-landing-page-minimal-landing-page)
 
 ⚙️ Technologies
 HTML5
