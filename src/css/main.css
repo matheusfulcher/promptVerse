@@ -1,6 +1,15 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #000000;
     font-family: 'Manrope', sans-serif;
+}
+
+body::selection {
+    color: black;
+    background-color: white;
 }
 
 .header {
@@ -17,7 +26,13 @@ body {
 }
 
 .navbar__svg {
+    transition: all .8s ease-in-out;
     width: 200px;
+}
+
+.navbar__svg:hover {
+    scale: 110%;
+    cursor: pointer;
 }
 
 .navbar__list {
@@ -26,19 +41,29 @@ body {
     gap: 24px;
 }
 
+.navbar__li:hover a {
+    color: rgb(167, 167, 167);
+}
 
 a {
     text-decoration: none;
     color: white;
+    transition: all 0.1s ease-out allow-discrete;
 }
 
 .navbar__li-btn a {
-    background-color: white;
-    color: black;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     padding: 1rem 2.25rem;
     border-radius: 55px;
     font-weight: 700;
     text-decoration: none;
+    transition: all 0.3s ease-out allow-discrete;
+}
+
+.navbar__li-btn a:hover {
+    background-color: rgb(197, 197, 197);
+
 }
 
 main {
@@ -48,7 +73,6 @@ main {
     align-items: center;
     height: 92vh;
     background-image: url(/public/images/star-bg.svg);
-
     background-size: cover;
     padding-bottom: 8rem;
     position: relative;
@@ -61,6 +85,8 @@ main {
     align-items: center;
 }
 
+
+
 .hero__heading h1 {
     color: white;
     font-size: 4.5rem;
@@ -70,10 +96,15 @@ main {
     margin-top: 5px;
 }
 
+
 .hero__heading span {
     font-size: 1.25rem;
     font-weight: 600;
-    color: white;
+    background: linear-gradient(120deg,
+            hsl(260 70% 70%),
+            hsl(0 100% 80%));
+    background-clip: text;
+    color: transparent
 }
 
 
@@ -103,6 +134,11 @@ main {
     border-radius: 55px;
     padding: 14px 34px;
     gap: 10px;
+    transition: all 0.3s ease-out allow-discrete;
+}
+
+.hero__generate-btn:hover {
+    scale: 110%;
 }
 
 .hero__download-btn {
@@ -111,6 +147,12 @@ main {
     font-weight: 600;
     border-radius: 55px;
     padding: 14px 34px;
+    transition: all 0.3s ease-out allow-discrete;
+}
+
+.hero__download-btn:hover {
+    background-color: rgb(201, 201, 201);
+    scale: 110%;
 }
 
 .hero__blur {
@@ -121,7 +163,7 @@ main {
     width: 1500px;
     height: 1500px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(238, 237, 228, 0.3) 7%, rgba(0, 0, 0, 0) 70%);
+    background: radial-gradient(circle, rgba(190, 190, 190, 0.3) 7%, rgba(0, 0, 0, 0) 70%);
     overflow: hidden;
     z-index: -10;
 }
