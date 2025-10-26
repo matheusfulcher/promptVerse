@@ -48,8 +48,11 @@ main {
     align-items: center;
     height: 92vh;
     background-image: url(/public/images/star-bg.svg);
+
     background-size: cover;
     padding-bottom: 8rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero__heading {
@@ -63,7 +66,8 @@ main {
     font-size: 4.5rem;
     font-weight: 500;
     text-align: center;
-    line-height: 74px;
+    line-height: 85px;
+    margin-top: 5px;
 }
 
 .hero__heading span {
@@ -74,7 +78,7 @@ main {
 
 
 .hero__sub-heading h2 {
-    color: #5e5e5e;
+    color: #808080;
     font-size: 1rem;
     margin-top: 30px;
     margin-bottom: 48px;
@@ -107,4 +111,17 @@ main {
     font-weight: 600;
     border-radius: 55px;
     padding: 14px 34px;
+}
+
+.hero__blur {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1500px;
+    height: 1500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(238, 237, 228, 0.3) 7%, rgba(0, 0, 0, 0) 70%);
+    overflow: hidden;
+    z-index: -10;
 }
